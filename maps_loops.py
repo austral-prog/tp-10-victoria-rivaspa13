@@ -44,14 +44,16 @@ def find_biggest_expense(dictionary):
 def sum_of_expenses(expenses):
     total_expenses = {}
     for category, costs in expenses.items():
-        total_expenses[category] = sum(costs)  # Summing the list of costs
+        total_expenses[category] = sum(costs)  
     return total_expenses
-    
+
+
 def sum_of_expenses_by_type(expenses):
     res = {}
     for category, costs in expenses.items():
         for item_type, amount in costs:
             if item_type in res:
-                res[item_type] += amount  
-                res[item_type] = amount 
+                res[item_type] += amount 
+            else:
+                res[item_type] = amount
     return res
