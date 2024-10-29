@@ -49,10 +49,9 @@ def sum_of_expenses(expenses):
     
 def sum_of_expenses_by_type(expenses):
     res = {}
-    for k, v in expenses.items():
-        for t, exp in expenses.items():
-            if t in res:
-                res[t] += exp
-            else:
-                res[t] = exp
+    for category, costs in expenses.items():
+        for item_type, amount in costs:
+            if item_type in res:
+                res[item_type] += amount  
+                res[item_type] = amount 
     return res
