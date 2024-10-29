@@ -1,6 +1,6 @@
-def unique_strings(words):
-    unique_chars = []
-    for char in words:
+def unique_characters(input_string):
+    unique_chars = [] 
+    for char in input_string:
         if char not in unique_chars:
             unique_chars.append(char)
     return unique_chars
